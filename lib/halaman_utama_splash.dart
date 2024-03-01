@@ -1,21 +1,28 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class HalamanUtamaSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Halaman Utama - Splash'),
+        title: Text(
+          'Artikelku',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.black,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Nama Aplikasi',
-              style: TextStyle(fontSize: 24),
+              'Artikelku',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
+              ),
             ),
             SizedBox(height: 20),
             FlutterLogo(size: 100),
@@ -24,7 +31,34 @@ class HalamanUtamaSplash extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/artikel');
               },
-              child: Text('Lanjut ke Artikel'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.white,
+                onPrimary: Colors.black,
+              ),
+              child: Text(
+                'Lanjut ke Artikel',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Motto Aplikasi:',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+                fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
+              ),
+            ),
+            Text(
+              'Membaca Buku Setiap Waktu',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+                fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
+              ),
             ),
           ],
         ),
