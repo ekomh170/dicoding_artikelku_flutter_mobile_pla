@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'halaman_utama_splash.dart';
+import 'halaman_artikel.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -8,7 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final Map<String, WidgetBuilder> routes = {
     '/': (context) => HalamanUtamaSplash(),
-
+    '/artikel': (context) => HalamanArtikel(),
   };
 
   @override
