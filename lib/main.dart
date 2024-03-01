@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'halaman_utama_splash.dart';
 import 'halaman_artikel.dart';
 import 'halaman_detail_artikel.dart';
+import 'halaman_biodata_pembuat_aplikasi.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     '/': (context) => HalamanUtamaSplash(),
     '/artikel': (context) => HalamanArtikel(),
     '/detailArtikel': (context) => HalamanDetailArtikel(),
+    '/biodataPembuatAplikasi': (context) => HalamanBiodataPembuatAplikasi(),
   };
 
   @override
