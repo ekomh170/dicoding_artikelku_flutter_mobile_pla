@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class HalamanUtamaSplash extends StatelessWidget {
@@ -6,27 +8,39 @@ class HalamanUtamaSplash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text(
-          'Artikelku',
-          style: TextStyle(color: Colors.white),
-        ),
         backgroundColor: Colors.black,
+        elevation: 0, // Menghilangkan bayangan di AppBar
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Judul Aplikasi
             Text(
               'Artikelku',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 36,
                 color: Colors.white,
-                fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
+                fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(height: 20),
-            FlutterLogo(size: 100),
+            // Icon Buku
+            Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+              ),
+              child: Icon(
+                Icons.book,
+                size: 100,
+                color: Colors.black,
+              ),
+            ),
             SizedBox(height: 20),
+            // Tombol Lanjut ke Artikel
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/artikel');
@@ -34,22 +48,26 @@ class HalamanUtamaSplash extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
                 onPrimary: Colors.black,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
               child: Text(
                 'Lanjut ke Artikel',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             SizedBox(height: 20),
+            // Motto Aplikasi
             Text(
               'Motto Aplikasi:',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.white,
-                fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
               ),
             ),
             Text(
@@ -57,7 +75,6 @@ class HalamanUtamaSplash extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.white,
-                fontFamily: 'Roboto', // Contoh: Menggunakan font Roboto
               ),
             ),
           ],
