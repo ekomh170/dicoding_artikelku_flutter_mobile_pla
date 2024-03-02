@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use, use_key_in_widget_constructors
+// ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -62,20 +62,46 @@ class HalamanUtamaSplash extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // Motto Aplikasi
-            Text(
-              'Motto Aplikasi:',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
+            // Tombol Halaman Pembuat Artikelku
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/biodataPembuatAplikasi');
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.white,
+                onPrimary: Colors.black,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              child: Text(
+                'Halaman Pembuat Artikelku',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-            Text(
-              'Membaca Buku Setiap Waktu',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
-              ),
+            SizedBox(height: 20),
+            // Motto Aplikasi
+            Column(
+              children: [
+                Text(
+                  'Motto Aplikasi:',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'Membaca Buku Setiap Waktu',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
