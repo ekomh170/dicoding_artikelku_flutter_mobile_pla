@@ -1,6 +1,6 @@
 {
-    "name": "dicoding_artikelku_flutter_mobile_pla",
-    "short_name": "dicoding_artikelku_flutter_mobile_pla",
+    "name": "Artikelku",
+    "short_name": "Artikelku",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
@@ -10,23 +10,23 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-maskable-192.png",
+            "src": "favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "icons/Icon-maskable-512.png",
+            "src": "favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
